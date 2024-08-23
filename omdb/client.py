@@ -20,10 +20,7 @@ class OmdbMovie:
     exception if the key is not found."""
 
     if key not in self.data:
-      raise AttributeError(
-        f"{key} is not in data, please make sure this is
-        a detail response."
-      )
+      raise AttributeError(f"{key} is not in data, please make sure this is a detail response.")
 
   @property
   def imdb_id(self):
@@ -42,8 +39,7 @@ class OmdbMovie:
     self.check_for_detail_data_key("Runtime")
     rt, units = self.data["Runtime"].split(" ")
     if units != "min":
-      raise ValueError(f"Expected units 'min' for runtime.
-    Got '{units}")
+      raise ValueError(f"Expected units 'min' for runtime. Got '{units}")
     
     return int(rt)
   

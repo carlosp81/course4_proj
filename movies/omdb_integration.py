@@ -4,7 +4,7 @@ from datetime import timedelta
 from django.utils.timezone import now
 
 from movies.models import Genre, SearchTerm, Movie
-# from omdb.django_client import get_client_from_settings
+from omdb.django_client import get_client_from_settings
 
 logger = logging.getLogger(__name__)
 
